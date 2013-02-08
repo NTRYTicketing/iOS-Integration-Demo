@@ -1,0 +1,491 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4093431116C556CF00C1F208 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4093431016C556CF00C1F208 /* UIKit.framework */; };
+		4093431316C556CF00C1F208 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4093431216C556CF00C1F208 /* Foundation.framework */; };
+		4093431516C556CF00C1F208 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4093431416C556CF00C1F208 /* CoreGraphics.framework */; };
+		4093431B16C556CF00C1F208 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4093431916C556CF00C1F208 /* InfoPlist.strings */; };
+		4093431D16C556CF00C1F208 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4093431C16C556CF00C1F208 /* main.m */; };
+		4093432116C556CF00C1F208 /* BITAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4093432016C556CF00C1F208 /* BITAppDelegate.m */; };
+		4093432316C556CF00C1F208 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4093432216C556CF00C1F208 /* Default.png */; };
+		4093432516C556CF00C1F208 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4093432416C556CF00C1F208 /* Default@2x.png */; };
+		4093432716C556CF00C1F208 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4093432616C556CF00C1F208 /* Default-568h@2x.png */; };
+		4093432A16C556CF00C1F208 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4093432816C556CF00C1F208 /* MainStoryboard.storyboard */; };
+		4093432D16C556CF00C1F208 /* BITFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4093432C16C556CF00C1F208 /* BITFirstViewController.m */; };
+		4093432F16C556CF00C1F208 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 4093432E16C556CF00C1F208 /* first.png */; };
+		4093433116C556CF00C1F208 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4093433016C556CF00C1F208 /* first@2x.png */; };
+		4093433416C556CF00C1F208 /* BITSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4093433316C556CF00C1F208 /* BITSecondViewController.m */; };
+		4093433616C556CF00C1F208 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 4093433516C556CF00C1F208 /* second.png */; };
+		4093433816C556CF00C1F208 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4093433716C556CF00C1F208 /* second@2x.png */; };
+		4093434016C556CF00C1F208 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4093433F16C556CF00C1F208 /* SenTestingKit.framework */; };
+		4093434116C556CF00C1F208 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4093431016C556CF00C1F208 /* UIKit.framework */; };
+		4093434216C556CF00C1F208 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4093431216C556CF00C1F208 /* Foundation.framework */; };
+		4093434A16C556D000C1F208 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4093434816C556D000C1F208 /* InfoPlist.strings */; };
+		4093434D16C556D000C1F208 /* NTRY_Integration_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4093434C16C556D000C1F208 /* NTRY_Integration_DemoTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4093434316C556CF00C1F208 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4093430516C556CF00C1F208 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4093430C16C556CF00C1F208;
+			remoteInfo = "NTRY Integration Demo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4093430D16C556CF00C1F208 /* NTRY Integration Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NTRY Integration Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4093431016C556CF00C1F208 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4093431216C556CF00C1F208 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4093431416C556CF00C1F208 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4093431816C556CF00C1F208 /* NTRY Integration Demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NTRY Integration Demo-Info.plist"; sourceTree = "<group>"; };
+		4093431A16C556CF00C1F208 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4093431C16C556CF00C1F208 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4093431E16C556CF00C1F208 /* NTRY Integration Demo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NTRY Integration Demo-Prefix.pch"; sourceTree = "<group>"; };
+		4093431F16C556CF00C1F208 /* BITAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BITAppDelegate.h; sourceTree = "<group>"; };
+		4093432016C556CF00C1F208 /* BITAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BITAppDelegate.m; sourceTree = "<group>"; };
+		4093432216C556CF00C1F208 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		4093432416C556CF00C1F208 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		4093432616C556CF00C1F208 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		4093432916C556CF00C1F208 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		4093432B16C556CF00C1F208 /* BITFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BITFirstViewController.h; sourceTree = "<group>"; };
+		4093432C16C556CF00C1F208 /* BITFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BITFirstViewController.m; sourceTree = "<group>"; };
+		4093432E16C556CF00C1F208 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		4093433016C556CF00C1F208 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		4093433216C556CF00C1F208 /* BITSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BITSecondViewController.h; sourceTree = "<group>"; };
+		4093433316C556CF00C1F208 /* BITSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BITSecondViewController.m; sourceTree = "<group>"; };
+		4093433516C556CF00C1F208 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		4093433716C556CF00C1F208 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		4093433E16C556CF00C1F208 /* NTRY Integration DemoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NTRY Integration DemoTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4093433F16C556CF00C1F208 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		4093434716C556CF00C1F208 /* NTRY Integration DemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NTRY Integration DemoTests-Info.plist"; sourceTree = "<group>"; };
+		4093434916C556D000C1F208 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4093434B16C556D000C1F208 /* NTRY_Integration_DemoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTRY_Integration_DemoTests.h; sourceTree = "<group>"; };
+		4093434C16C556D000C1F208 /* NTRY_Integration_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTRY_Integration_DemoTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4093430A16C556CF00C1F208 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4093431116C556CF00C1F208 /* UIKit.framework in Frameworks */,
+				4093431316C556CF00C1F208 /* Foundation.framework in Frameworks */,
+				4093431516C556CF00C1F208 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4093433A16C556CF00C1F208 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4093434016C556CF00C1F208 /* SenTestingKit.framework in Frameworks */,
+				4093434116C556CF00C1F208 /* UIKit.framework in Frameworks */,
+				4093434216C556CF00C1F208 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4093430416C556CF00C1F208 = {
+			isa = PBXGroup;
+			children = (
+				4093431616C556CF00C1F208 /* NTRY Integration Demo */,
+				4093434516C556CF00C1F208 /* NTRY Integration DemoTests */,
+				4093430F16C556CF00C1F208 /* Frameworks */,
+				4093430E16C556CF00C1F208 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4093430E16C556CF00C1F208 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4093430D16C556CF00C1F208 /* NTRY Integration Demo.app */,
+				4093433E16C556CF00C1F208 /* NTRY Integration DemoTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4093430F16C556CF00C1F208 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4093431016C556CF00C1F208 /* UIKit.framework */,
+				4093431216C556CF00C1F208 /* Foundation.framework */,
+				4093431416C556CF00C1F208 /* CoreGraphics.framework */,
+				4093433F16C556CF00C1F208 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4093431616C556CF00C1F208 /* NTRY Integration Demo */ = {
+			isa = PBXGroup;
+			children = (
+				4093431F16C556CF00C1F208 /* BITAppDelegate.h */,
+				4093432016C556CF00C1F208 /* BITAppDelegate.m */,
+				4093432816C556CF00C1F208 /* MainStoryboard.storyboard */,
+				4093432B16C556CF00C1F208 /* BITFirstViewController.h */,
+				4093432C16C556CF00C1F208 /* BITFirstViewController.m */,
+				4093432E16C556CF00C1F208 /* first.png */,
+				4093433016C556CF00C1F208 /* first@2x.png */,
+				4093433216C556CF00C1F208 /* BITSecondViewController.h */,
+				4093433316C556CF00C1F208 /* BITSecondViewController.m */,
+				4093433516C556CF00C1F208 /* second.png */,
+				4093433716C556CF00C1F208 /* second@2x.png */,
+				4093431716C556CF00C1F208 /* Supporting Files */,
+			);
+			path = "NTRY Integration Demo";
+			sourceTree = "<group>";
+		};
+		4093431716C556CF00C1F208 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4093431816C556CF00C1F208 /* NTRY Integration Demo-Info.plist */,
+				4093431916C556CF00C1F208 /* InfoPlist.strings */,
+				4093431C16C556CF00C1F208 /* main.m */,
+				4093431E16C556CF00C1F208 /* NTRY Integration Demo-Prefix.pch */,
+				4093432216C556CF00C1F208 /* Default.png */,
+				4093432416C556CF00C1F208 /* Default@2x.png */,
+				4093432616C556CF00C1F208 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4093434516C556CF00C1F208 /* NTRY Integration DemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				4093434B16C556D000C1F208 /* NTRY_Integration_DemoTests.h */,
+				4093434C16C556D000C1F208 /* NTRY_Integration_DemoTests.m */,
+				4093434616C556CF00C1F208 /* Supporting Files */,
+			);
+			path = "NTRY Integration DemoTests";
+			sourceTree = "<group>";
+		};
+		4093434616C556CF00C1F208 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4093434716C556CF00C1F208 /* NTRY Integration DemoTests-Info.plist */,
+				4093434816C556D000C1F208 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4093430C16C556CF00C1F208 /* NTRY Integration Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4093435016C556D000C1F208 /* Build configuration list for PBXNativeTarget "NTRY Integration Demo" */;
+			buildPhases = (
+				4093430916C556CF00C1F208 /* Sources */,
+				4093430A16C556CF00C1F208 /* Frameworks */,
+				4093430B16C556CF00C1F208 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NTRY Integration Demo";
+			productName = "NTRY Integration Demo";
+			productReference = 4093430D16C556CF00C1F208 /* NTRY Integration Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4093433D16C556CF00C1F208 /* NTRY Integration DemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4093435316C556D000C1F208 /* Build configuration list for PBXNativeTarget "NTRY Integration DemoTests" */;
+			buildPhases = (
+				4093433916C556CF00C1F208 /* Sources */,
+				4093433A16C556CF00C1F208 /* Frameworks */,
+				4093433B16C556CF00C1F208 /* Resources */,
+				4093433C16C556CF00C1F208 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4093434416C556CF00C1F208 /* PBXTargetDependency */,
+			);
+			name = "NTRY Integration DemoTests";
+			productName = "NTRY Integration DemoTests";
+			productReference = 4093433E16C556CF00C1F208 /* NTRY Integration DemoTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4093430516C556CF00C1F208 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BIT;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Bitstem Software";
+			};
+			buildConfigurationList = 4093430816C556CF00C1F208 /* Build configuration list for PBXProject "NTRY Integration Demo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4093430416C556CF00C1F208;
+			productRefGroup = 4093430E16C556CF00C1F208 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4093430C16C556CF00C1F208 /* NTRY Integration Demo */,
+				4093433D16C556CF00C1F208 /* NTRY Integration DemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4093430B16C556CF00C1F208 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4093431B16C556CF00C1F208 /* InfoPlist.strings in Resources */,
+				4093432316C556CF00C1F208 /* Default.png in Resources */,
+				4093432516C556CF00C1F208 /* Default@2x.png in Resources */,
+				4093432716C556CF00C1F208 /* Default-568h@2x.png in Resources */,
+				4093432A16C556CF00C1F208 /* MainStoryboard.storyboard in Resources */,
+				4093432F16C556CF00C1F208 /* first.png in Resources */,
+				4093433116C556CF00C1F208 /* first@2x.png in Resources */,
+				4093433616C556CF00C1F208 /* second.png in Resources */,
+				4093433816C556CF00C1F208 /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4093433B16C556CF00C1F208 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4093434A16C556D000C1F208 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4093433C16C556CF00C1F208 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4093430916C556CF00C1F208 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4093431D16C556CF00C1F208 /* main.m in Sources */,
+				4093432116C556CF00C1F208 /* BITAppDelegate.m in Sources */,
+				4093432D16C556CF00C1F208 /* BITFirstViewController.m in Sources */,
+				4093433416C556CF00C1F208 /* BITSecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4093433916C556CF00C1F208 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4093434D16C556D000C1F208 /* NTRY_Integration_DemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4093434416C556CF00C1F208 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4093430C16C556CF00C1F208 /* NTRY Integration Demo */;
+			targetProxy = 4093434316C556CF00C1F208 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4093431916C556CF00C1F208 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4093431A16C556CF00C1F208 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4093432816C556CF00C1F208 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4093432916C556CF00C1F208 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		4093434816C556D000C1F208 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4093434916C556D000C1F208 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4093434E16C556D000C1F208 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4093434F16C556D000C1F208 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4093435116C556D000C1F208 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NTRY Integration Demo/NTRY Integration Demo-Prefix.pch";
+				INFOPLIST_FILE = "NTRY Integration Demo/NTRY Integration Demo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4093435216C556D000C1F208 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NTRY Integration Demo/NTRY Integration Demo-Prefix.pch";
+				INFOPLIST_FILE = "NTRY Integration Demo/NTRY Integration Demo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4093435416C556D000C1F208 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NTRY Integration Demo.app/NTRY Integration Demo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NTRY Integration Demo/NTRY Integration Demo-Prefix.pch";
+				INFOPLIST_FILE = "NTRY Integration DemoTests/NTRY Integration DemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		4093435516C556D000C1F208 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NTRY Integration Demo.app/NTRY Integration Demo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NTRY Integration Demo/NTRY Integration Demo-Prefix.pch";
+				INFOPLIST_FILE = "NTRY Integration DemoTests/NTRY Integration DemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4093430816C556CF00C1F208 /* Build configuration list for PBXProject "NTRY Integration Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4093434E16C556D000C1F208 /* Debug */,
+				4093434F16C556D000C1F208 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4093435016C556D000C1F208 /* Build configuration list for PBXNativeTarget "NTRY Integration Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4093435116C556D000C1F208 /* Debug */,
+				4093435216C556D000C1F208 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4093435316C556D000C1F208 /* Build configuration list for PBXNativeTarget "NTRY Integration DemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4093435416C556D000C1F208 /* Debug */,
+				4093435516C556D000C1F208 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4093430516C556CF00C1F208 /* Project object */;
+}

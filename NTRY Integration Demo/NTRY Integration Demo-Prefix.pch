@@ -11,4 +11,11 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
+    #import <SystemConfiguration/SystemConfiguration.h>
+    #import <MobileCoreServices/MobileCoreServices.h>
+    #import <RestKit.h>
 #endif
+
+#define API_PROTOCOL @"http://"
+#define API_HOST @"ntry2.dev"  // *NO* trailing slash!

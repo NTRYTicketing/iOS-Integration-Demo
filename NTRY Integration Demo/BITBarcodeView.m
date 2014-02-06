@@ -31,7 +31,7 @@
         for (int row = 0; row < self.aztecData.count; ++row) {
             for (int col = 0; col < ((NSArray*)self.aztecData[row]).count; ++col) {
                 if ( [self.aztecData[row][col] intValue] == 1 ) {
-                    CGRect cell = CGRectMake(x, y, self.cellWidth, self.cellHeight);
+                    CGRect cell = CGRectMake(x, y, self.cellWidth + 0.25, self.cellHeight + 0.25);
                     CGContextFillRect(c, cell);
                 }
                 x += self.cellWidth;

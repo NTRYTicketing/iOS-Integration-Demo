@@ -30,13 +30,25 @@
 {
     [super viewDidLoad];
     
-    NSString* iframeLocation = [NSString stringWithFormat:@"%@%@/%@.iframe?stay_in_frame=yes", API_PROTOCOL, API_HOST, self.event.shortUrl ];
+    //NSString* iframeLocation = [NSString stringWithFormat:@"http://ntry2.dev/if-test/simple.html"];
+    NSString* iframeLocation = [NSString stringWithFormat:@"%@%@/%@.iframe?l=en&device_id=%@", API_PROTOCOL, API_HOST, self.event.shortUrl, [[[UIDevice currentDevice] identifierForVendor] UUIDString] ];
 
     self.webView.delegate = self;
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:iframeLocation]]];
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    CGRect frame = self.webView.frame;
+    self.webView.scrollView.frame = frame;
+    
+}
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -51,31 +63,18 @@
 #pragma mark - UIWebView delegate
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView {
-    NSLog(@"loaded %@, back: %d", [webView debugDescription], webView.canGoBack);
+    NSCachedURLResponse *cur = [[NSURLCache sharedURLCache] cachedResponseForRequest:webView.request];
+    NSHTTPURLResponse* response = (NSHTTPURLResponse*)cur.response;
+    NSDictionary* headers = [response allHeaderFields];
+    NSLog(@"loaded %@, back: %d, %@", [webView debugDescription], webView.canGoBack, headers);
     
-    // check for embedded tickets
-    NSString *ticketHtml = [webView stringByEvaluatingJavaScriptFromString: @"document.getElementById('tickets').outerHTML;"];
-    
-    if ( ticketHtml.length ) {
-        TFHpple* tickets = [[TFHpple alloc] initWithHTMLData:[ticketHtml dataUsingEncoding:NSUTF8StringEncoding]];
-        
-        for ( TFHppleElement* ticket in [tickets searchWithXPathQuery:@"//div[@class='ticket']"] ) {
-            
-            //create a new ticket
-            Ticket* newTicket = [NSEntityDescription
-                                   insertNewObjectForEntityForName:@"Ticket"
-                                   inManagedObjectContext:[RKObjectManager sharedManager].managedObjectStore.mainQueueManagedObjectContext];
-            
-            newTicket.ticketCode = [[ticket attributes] valueForKey:@"data-code"];
-            newTicket.persons = [NSNumber numberWithInteger:[[[ticket attributes] valueForKey:@"data-persons"] intValue]];
-            newTicket.imageUri = [[ticket attributes] valueForKey:@"data-ticket-image-url"];
-            newTicket.aztecData = [[ticket attributes] valueForKey:@"data-aztec"];
-            newTicket.formatedCode = [[ticket attributes] valueForKey:@"data-formatted-code"];
-            
-            [self.event addTicketsObject:newTicket];
-            [[RKObjectManager sharedManager].managedObjectStore.mainQueueManagedObjectContext saveToPersistentStore:nil];
-        }
+    NSString* token = [headers objectForKey:@"NTRY-Device-Token"];
+    if ( token ) {
+        NSLog( @"Got device token %@", token );
+        [[NSUserDefaults standardUserDefaults] setObject:token forKey:@"deviceToken"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
     }
+
         
     // hijack UINavController's back button?
     if ( webView.canGoBack ) {

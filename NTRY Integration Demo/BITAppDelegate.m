@@ -7,6 +7,7 @@
 //
 
 #import "BITAppDelegate.h"
+#import "Ticket.h"
 
 @interface BITAppDelegate ()
 @property (strong, nonatomic) RKManagedObjectStore* managedObjectStore;
@@ -41,7 +42,7 @@
     
     [self.managedObjectStore createPersistentStoreCoordinator];
 
-    NSString *storePath = [RKApplicationDataDirectory() stringByAppendingPathComponent:@"ntry_integration_demo_1.0.sqlite"];
+    NSString *storePath = [RKApplicationDataDirectory() stringByAppendingPathComponent:@"ntry_integration_demo_1.1d.sqlite"];
     NSError *error;
     [self.managedObjectStore addSQLitePersistentStoreAtPath:storePath fromSeedDatabaseAtPath:nil withConfiguration:nil options:@{NSMigratePersistentStoresAutomaticallyOption:@YES, NSInferMappingModelAutomaticallyOption:@YES} error:&error];
     
@@ -78,17 +79,83 @@
     }];
     
 
-    RKResponseDescriptor *eventResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:eventMapping pathPattern: @"/find_event/" keyPath: @"event" statusCodes:nil];
+    RKResponseDescriptor *eventResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:eventMapping method:RKRequestMethodAny pathPattern: @"/api/events/" keyPath: @"event" statusCodes:nil];
     [objectManager addResponseDescriptor:eventResponseDescriptor];
+
+    
+    RKEntityMapping * ticketMapping = [RKEntityMapping mappingForEntityForName:@"Ticket" inManagedObjectStore: self.managedObjectStore];
+    ticketMapping.identificationAttributes = @[ @"ticketId" ];
+    
+    [ticketMapping addAttributeMappingsFromDictionary: @{
+                                                        @"id" : @"ticketId",
+                                                        @"event_id" : @"event_id",
+                                                        @"code" : @"code",
+                                                        @"timestamp" : @"timestamp",
+                                                        @"last_fetch" : @"last_fetch",
+                                                        @"persons" : @"persons",
+                                                        @"name" : @"name",
+                                                        @"barcode" : @"barcode",
+                                                        @"pkpass" : @"pkpass"
+                                                        }];
+    
+ 
+    
+    [ticketMapping addConnectionForRelationship:@"event" connectedBy:@{ @"event_id": @"eventId" }];
+    
+    [objectManager.router.routeSet addRoute:[RKRoute routeWithClass:[Ticket class] pathPattern:@"/api/tickets/:ticketId" method:RKRequestMethodGET]];
+    
+    RKResponseDescriptor *ticketResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:ticketMapping method:RKRequestMethodAny pathPattern: @"/api/tickets/:ticketId" keyPath: @"ticket_instance" statusCodes:nil];
+    [objectManager addResponseDescriptor:ticketResponseDescriptor];
+
+    RKResponseDescriptor *ticketIndexResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:ticketMapping method:RKRequestMethodAny pathPattern: @"/api/tickets/" keyPath: @"ticket_instance" statusCodes:nil];
+    [objectManager addResponseDescriptor:ticketIndexResponseDescriptor];
+
     
     [RKObjectManager setSharedManager:objectManager];
     
 }
 
+- (void)checkForTickets
+{
+    NSString* token = [[NSUserDefaults standardUserDefaults] objectForKey:@"deviceToken"];
+    if ( token ) {
+        NSLog(@"Have device token, will check for new tickets");
+        
+        NSDictionary* params = @{
+                                @"device_id": [[[UIDevice currentDevice] identifierForVendor] UUIDString],
+                                @"token": token
+                                };
+        
+        RKObjectManager* objectManager = [RKObjectManager sharedManager];
+        
+        [objectManager getObjectsAtPath:@"/api/tickets/"
+                             parameters: params
+                                success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                                    NSLog(@"Ticket index GET successful");
+                                    
+                                    for ( Ticket* ticket in mappingResult.array) {
+                                        if ( ![ticket.timestamp isEqualToDate:ticket.last_fetch] ) {
+                                            // our lokal instance is either new or out of date, need to load details
+                                            [objectManager getObject:ticket
+                                                                path:nil
+                                                          parameters:params
+                                                             success:nil
+                                                             failure:nil];
+                                        }
+                                    }
+                                }
+                                failure:nil];
+    }
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [self defineMapping];
+    [NSTimer scheduledTimerWithTimeInterval:5.0
+                                     target:self
+                                   selector:@selector(checkForTickets)
+                                   userInfo:nil
+                                    repeats:YES];
     return YES;
 }
 							

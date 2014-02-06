@@ -2,8 +2,8 @@
 //  Ticket.m
 //  NTRY Integration Demo
 //
-//  Created by Klaus Kuehnhammer on 2/11/13.
-//  Copyright (c) 2013 Bitstem Software. All rights reserved.
+//  Created by Klaus Kuehnhammer on 05.02.14.
+//  Copyright (c) 2014 Bitstem Software. All rights reserved.
 //
 
 #import "Ticket.h"
@@ -12,11 +12,15 @@
 
 @implementation Ticket
 
-@dynamic aztecData;
-@dynamic imageUri;
+@dynamic barcode;
+@dynamic name;
+@dynamic code;
 @dynamic persons;
-@dynamic ticketCode;
-@dynamic formatedCode;
+@dynamic ticketId;
+@dynamic timestamp;
+@dynamic last_fetch;
+@dynamic pkpass;
+@dynamic event_id;
 @dynamic event;
 
 @end

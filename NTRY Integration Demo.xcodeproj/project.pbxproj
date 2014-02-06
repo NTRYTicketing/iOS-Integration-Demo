@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		402DE20E18A278A9006758C0 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 402DE20D18A278A9006758C0 /* Event.m */; };
+		402DE21C18A282E2006758C0 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 402DE21B18A282E2006758C0 /* PassKit.framework */; };
+		402DE23118A28BB8006758C0 /* Ticket.m in Sources */ = {isa = PBXBuildFile; fileRef = 402DE23018A28BB8006758C0 /* Ticket.m */; };
 		4093431116C556CF00C1F208 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4093431016C556CF00C1F208 /* UIKit.framework */; };
 		4093431316C556CF00C1F208 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4093431216C556CF00C1F208 /* Foundation.framework */; };
 		4093431516C556CF00C1F208 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4093431416C556CF00C1F208 /* CoreGraphics.framework */; };
@@ -34,11 +37,9 @@
 		4093437016C55F2600C1F208 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4093436F16C55F2600C1F208 /* MobileCoreServices.framework */; };
 		4093437616C5682400C1F208 /* BITTicketOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4093437516C5682400C1F208 /* BITTicketOrderViewController.m */; };
 		4093437B16C5720700C1F208 /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4093437A16C5720700C1F208 /* NSString+URLEncode.m */; };
-		409E0A6016C938850004EE12 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 409E0A5F16C938850004EE12 /* Event.m */; };
 		409E0A6416C939000004EE12 /* BITTicketsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 409E0A6316C939000004EE12 /* BITTicketsViewController.m */; };
 		409E0A6A16C93D2B0004EE12 /* BITTicketCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 409E0A6916C93D2B0004EE12 /* BITTicketCodeViewController.m */; };
 		409E0A7016C942BE0004EE12 /* BITBarcodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 409E0A6F16C942BE0004EE12 /* BITBarcodeView.m */; };
-		40FA2D4216C9484200AFA1A0 /* Ticket.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FA2D4116C9484200AFA1A0 /* Ticket.m */; };
 		60588420E1D1409DB95B541C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF47EC45DB24F56BACE474C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		402DE20C18A278A9006758C0 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		402DE20D18A278A9006758C0 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		402DE21B18A282E2006758C0 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
+		402DE22F18A28BB8006758C0 /* Ticket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ticket.h; sourceTree = "<group>"; };
+		402DE23018A28BB8006758C0 /* Ticket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ticket.m; sourceTree = "<group>"; };
 		4093430D16C556CF00C1F208 /* NTRY Integration Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NTRY Integration Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4093431016C556CF00C1F208 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4093431216C556CF00C1F208 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -88,16 +94,12 @@
 		4093437516C5682400C1F208 /* BITTicketOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITTicketOrderViewController.m; sourceTree = "<group>"; };
 		4093437916C5720700C1F208 /* NSString+URLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncode.h"; sourceTree = "<group>"; };
 		4093437A16C5720700C1F208 /* NSString+URLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncode.m"; sourceTree = "<group>"; };
-		409E0A5E16C938850004EE12 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
-		409E0A5F16C938850004EE12 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		409E0A6216C939000004EE12 /* BITTicketsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITTicketsViewController.h; sourceTree = "<group>"; };
 		409E0A6316C939000004EE12 /* BITTicketsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITTicketsViewController.m; sourceTree = "<group>"; };
 		409E0A6816C93D2B0004EE12 /* BITTicketCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITTicketCodeViewController.h; sourceTree = "<group>"; };
 		409E0A6916C93D2B0004EE12 /* BITTicketCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITTicketCodeViewController.m; sourceTree = "<group>"; };
 		409E0A6E16C942BE0004EE12 /* BITBarcodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITBarcodeView.h; sourceTree = "<group>"; };
 		409E0A6F16C942BE0004EE12 /* BITBarcodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITBarcodeView.m; sourceTree = "<group>"; };
-		40FA2D4016C9484200AFA1A0 /* Ticket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ticket.h; sourceTree = "<group>"; };
-		40FA2D4116C9484200AFA1A0 /* Ticket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ticket.m; sourceTree = "<group>"; };
 		8CF47EC45DB24F56BACE474C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF7F1125051A43D5987E88F1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -107,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				402DE21C18A282E2006758C0 /* PassKit.framework in Frameworks */,
 				4093437016C55F2600C1F208 /* MobileCoreServices.framework in Frameworks */,
 				4093436E16C55F2200C1F208 /* SystemConfiguration.framework in Frameworks */,
 				4093431116C556CF00C1F208 /* UIKit.framework in Frameworks */,
@@ -154,6 +157,7 @@
 		4093430F16C556CF00C1F208 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				402DE21B18A282E2006758C0 /* PassKit.framework */,
 				4093431016C556CF00C1F208 /* UIKit.framework */,
 				4093431216C556CF00C1F208 /* Foundation.framework */,
 				4093431416C556CF00C1F208 /* CoreGraphics.framework */,
@@ -238,11 +242,11 @@
 		4093436716C55C6600C1F208 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				40FA2D4016C9484200AFA1A0 /* Ticket.h */,
-				40FA2D4116C9484200AFA1A0 /* Ticket.m */,
 				4093436A16C55CAE00C1F208 /* ntry-integration-demo.xcdatamodeld */,
-				409E0A5E16C938850004EE12 /* Event.h */,
-				409E0A5F16C938850004EE12 /* Event.m */,
+				402DE22F18A28BB8006758C0 /* Ticket.h */,
+				402DE23018A28BB8006758C0 /* Ticket.m */,
+				402DE20C18A278A9006758C0 /* Event.h */,
+				402DE20D18A278A9006758C0 /* Event.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -410,17 +414,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				402DE20E18A278A9006758C0 /* Event.m in Sources */,
 				4093431D16C556CF00C1F208 /* main.m in Sources */,
 				4093432116C556CF00C1F208 /* BITAppDelegate.m in Sources */,
 				4093436216C559A900C1F208 /* BITEventsTableViewController.m in Sources */,
 				4093436C16C55CAE00C1F208 /* ntry-integration-demo.xcdatamodeld in Sources */,
 				4093437616C5682400C1F208 /* BITTicketOrderViewController.m in Sources */,
 				4093437B16C5720700C1F208 /* NSString+URLEncode.m in Sources */,
-				409E0A6016C938850004EE12 /* Event.m in Sources */,
 				409E0A6416C939000004EE12 /* BITTicketsViewController.m in Sources */,
+				402DE23118A28BB8006758C0 /* Ticket.m in Sources */,
 				409E0A6A16C93D2B0004EE12 /* BITTicketCodeViewController.m in Sources */,
 				409E0A7016C942BE0004EE12 /* BITBarcodeView.m in Sources */,
-				40FA2D4216C9484200AFA1A0 /* Ticket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

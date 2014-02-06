@@ -95,7 +95,7 @@
     [fetchRequest setFetchBatchSize:20];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"ticketCode" ascending:YES];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"code" ascending:YES];
     NSArray *sortDescriptors = @[sortDescriptor];
     
     [fetchRequest setSortDescriptors:sortDescriptors];
@@ -180,13 +180,13 @@
     Ticket *ticket = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
     cell.textLabel.text = ticket.event.title;
-    cell.detailTextLabel.text = ticket.ticketCode;
+    cell.detailTextLabel.text = ticket.code;
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
     [dateFormatter setDateStyle:NSDateFormatterShortStyle];
     
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@ Pers.", ticket.ticketCode, ticket.persons];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", ticket.code];
 }
 
 @end

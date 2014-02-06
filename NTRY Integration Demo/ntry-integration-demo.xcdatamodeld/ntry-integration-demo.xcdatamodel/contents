@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="12C2034" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Event" representedClassName="Event" syncable="YES">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
@@ -25,15 +25,19 @@
         <relationship name="tickets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ticket" inverseName="event" inverseEntity="Ticket" syncable="YES"/>
     </entity>
     <entity name="Ticket" representedClassName="Ticket" syncable="YES">
-        <attribute name="aztecData" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="formatedCode" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="imageUri" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="barcode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="code" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="event_id" optional="YES" transient="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="last_fetch" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="persons" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="ticketCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pkpass" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ticketId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="event" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Event" inverseName="tickets" inverseEntity="Event" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Event" positionX="160" positionY="192" width="128" height="375"/>
-        <element name="Ticket" positionX="160" positionY="192" width="128" height="135"/>
+        <element name="Event" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Ticket" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

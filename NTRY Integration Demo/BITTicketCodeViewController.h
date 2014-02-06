@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *eventTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *ticketCodeLabel;
 @property (weak, nonatomic) IBOutlet BITBarcodeView *barcodeView;
+- (IBAction)addToPassbook:(id)sender;
 
 @property (strong, nonatomic) Ticket* ticket;
 @end

@@ -2,8 +2,8 @@
 //  Event.m
 //  NTRY Integration Demo
 //
-//  Created by Klaus Kuehnhammer on 2/11/13.
-//  Copyright (c) 2013 Bitstem Software. All rights reserved.
+//  Created by Klaus Kuehnhammer on 05.02.14.
+//  Copyright (c) 2014 Bitstem Software. All rights reserved.
 //
 
 #import "Event.h"

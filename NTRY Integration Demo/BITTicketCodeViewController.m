@@ -8,6 +8,7 @@
 
 #import "BITTicketCodeViewController.h"
 #import "Event.h"
+#import <PassKit/PassKit.h>
 
 @implementation BITTicketCodeViewController
 
@@ -24,10 +25,11 @@
 {
     [super viewDidLoad];
 
-    self.eventTitleLabel.text = self.ticket.event.title;
-    self.ticketCodeLabel.text = self.ticket.formatedCode;
     
-    self.barcodeView.aztecData = [NSJSONSerialization JSONObjectWithData:[self.ticket.aztecData dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingAllowFragments error:nil];
+    self.eventTitleLabel.text = self.ticket.event.title;
+    self.ticketCodeLabel.text = self.ticket.code;
+    
+    self.barcodeView.aztecData = [NSJSONSerialization JSONObjectWithData:[self.ticket.barcode dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingAllowFragments error:nil];
     
 }
 
@@ -38,4 +40,20 @@
 }
 
 
+- (IBAction)addToPassbook:(id)sender {
+    if ( [PKPassLibrary isPassLibraryAvailable] ) {
+        NSData *pkpassData = [[NSData alloc] initWithBase64EncodedString:self.ticket.pkpass options:NSDataBase64DecodingIgnoreUnknownCharacters];
+        
+        PKPass* pass = [[PKPass new] initWithData:pkpassData error:nil];
+        PKPassLibrary* passLib = [PKPassLibrary new];
+        
+        if ( [passLib containsPass:pass] ) {
+            // pass is already in there, just show it
+            [[UIApplication sharedApplication] openURL:[pass passURL]];
+        } else {
+            PKAddPassesViewController* apvc = [[PKAddPassesViewController new] initWithPass:pass];
+            [self presentViewController:apvc animated:YES completion:nil];
+        }
+    }
+}
 @end

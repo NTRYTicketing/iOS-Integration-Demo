@@ -199,11 +199,12 @@
 
 - (IBAction)doRefresh:(UIRefreshControl*)sender {
     RKObjectManager* objectManager = [RKObjectManager sharedManager];
-
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZ"];
     
-    [objectManager  postObject:nil
-                          path:@"/find_event/"
-                    parameters:@{@"tag": @"EB"}
+    [objectManager  getObjectsAtPath:@"/api/events/"
+                          parameters:@{ @"tag": @"EB",
+                                        @"after": [dateFormatter stringFromDate:[NSDate date]] }
                             success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
                                 #pragma unused( operation, mappingResult )
                                 NSLog(@"OK");

@@ -38,10 +38,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    [super viewWillAppear:animated];
-    CGRect frame = self.webView.frame;
-    self.webView.scrollView.frame = frame;
-    
+    [super viewWillAppear:animated];    
 }
 
 -(void)viewDidAppear:(BOOL)animated

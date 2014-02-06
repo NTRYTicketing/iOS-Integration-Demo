@@ -17,8 +17,8 @@
     #import <RestKit.h>
 #endif
 
-//#define API_PROTOCOL @"https://"
-//#define API_HOST @"ntry.at"  // *NO* trailing slash!
+#define API_PROTOCOL @"https://"
+#define API_HOST @"ntry.at"  // *NO* trailing slash!
 
-#define API_PROTOCOL @"http://"
-#define API_HOST @"ntry2.dev"  // *NO* trailing slash!
+//#define API_PROTOCOL @"http://"
+//#define API_HOST @"ntry2.dev"  // *NO* trailing slash!

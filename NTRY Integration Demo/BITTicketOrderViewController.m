@@ -7,7 +7,6 @@
 //
 
 #import "NSString+URLEncode.h"
-#import "TFHpple.h"
 
 #import "BITTicketOrderViewController.h"
 #import "Ticket.h"
